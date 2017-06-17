@@ -22,16 +22,21 @@ public class PlaneFilter  {
         int endVal = Integer.parseInt(reader.readLine());
         Plane[] fuelSortedPlanes = new Plane[planes.length];
         int counter = 0;
-        for(Plane plane : planes){
-            if(plane.getFuelConsumption() > startVal && plane.getFuelConsumption() < endVal){
-                fuelSortedPlanes[counter] = plane;
-                counter++;
+        if(startVal < endVal) {
+            for (Plane plane : planes) {
+                if (plane.getFuelConsumption() > startVal && plane.getFuelConsumption() < endVal) {
+                    fuelSortedPlanes[counter] = plane;
+                    counter++;
+                }
             }
-        }
 
-        System.out.println("Fuel consumption sorted list between " + startVal + " and " + endVal);
-        PlanesListDrawer.drawPlanesList(fuelSortedPlanes);
-        System.out.println("End list");
+            System.out.println("Fuel consumption sorted list between " + startVal + " and " + endVal);
+            System.out.println(counter + " results");
+            PlanesListDrawer.drawPlanesList(fuelSortedPlanes);
+            System.out.println("End list");
+        }
+        else
+            System.out.println("Wrong input!!");
     }
 
 }
