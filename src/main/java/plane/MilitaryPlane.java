@@ -11,6 +11,24 @@ public class MilitaryPlane extends Plane {
      */
     private WeaponType weaponType;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+
+        MilitaryPlane that = (MilitaryPlane) o;
+
+        return weaponType == that.weaponType;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + (weaponType != null ? weaponType.hashCode() : 0);
+        return result;
+    }
+
     public MilitaryPlane(String name, int cruisingSpeed, int flightRange, int maxTakeOffWeight, int maxFlightHeight,
                          int fuelConsumption, WeaponType weaponType) {
         super(name, cruisingSpeed, flightRange, maxTakeOffWeight, maxFlightHeight, fuelConsumption);

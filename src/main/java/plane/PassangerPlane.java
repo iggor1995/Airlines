@@ -17,6 +17,24 @@ public class PassangerPlane extends Plane {
         this.passengersQuantity = passengersQuantity;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+
+        PassangerPlane that = (PassangerPlane) o;
+
+        return passengersQuantity == that.passengersQuantity;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + passengersQuantity;
+        return result;
+    }
+
     public int getPassengersQuantity() {
         return passengersQuantity;
     }

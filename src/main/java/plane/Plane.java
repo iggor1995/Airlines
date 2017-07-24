@@ -55,4 +55,30 @@ public abstract class Plane implements Comparable<Plane>{
             return  1;
 
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Plane plane = (Plane) o;
+
+        if (cruisingSpeed != plane.cruisingSpeed) return false;
+        if (flightRange != plane.flightRange) return false;
+        if (maxTakeOffWeight != plane.maxTakeOffWeight) return false;
+        if (maxFlightHeight != plane.maxFlightHeight) return false;
+        if (fuelConsumption != plane.fuelConsumption) return false;
+        return name != null ? name.equals(plane.name) : plane.name == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = name != null ? name.hashCode() : 0;
+        result = 31 * result + cruisingSpeed;
+        result = 31 * result + flightRange;
+        result = 31 * result + maxTakeOffWeight;
+        result = 31 * result + maxFlightHeight;
+        result = 31 * result + fuelConsumption;
+        return result;
+    }
 }

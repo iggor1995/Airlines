@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="https://www.w3schools.com"
+           xmlns="https://www.w3schools.com"
+           elementFormDefault="qualified">
+
+        <xs:element name = "aircompany">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name = "cargoPlane" type = "cargoPlane" minOccurs = "0" maxOccurs = "unbounded"/>
+                    <xs:element name = "passengerPlane" type = "passengerPlane" minOccurs = "0" maxOccurs = "unbounded"/>
+                    <xs:element name = "militaryPlane" type = "militaryPlane" minOccurs = "0" maxOccurs = "unbounded"/>
+                </xs:sequence>
+                <xs:attribute name = "name"/>
+            </xs:complexType>
+        </xs:element>
+
+    <xs:complexType name = "plane">
+            <xs:sequence>
+                <xs:element name = "name"/>
+                <xs:element name = "cruisingSpeed"/>
+                <xs:element name = "flightRange"/>
+                <xs:element name = "maxTakeOfWeight"/>
+                <xs:element name = "maxFlightHeight"/>
+                <xs:element name = "fuelConsumption"/>
+            </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name = "cargoPlane">
+        <xs:complexContent>
+            <xs:extension base = "plane">
+                <xs:attribute name = "overSeasFlight" type = "xs:boolean" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+
+    </xs:complexType>
+
+    <xs:complexType name = "passengerPlane">
+        <xs:complexContent>
+            <xs:extension base = "plane">
+                <xs:attribute name = "passengersQuantity" type = "xs:int" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name = "militaryPlane">
+        <xs:complexContent>
+            <xs:extension base = "plane">
+                <xs:attribute name = "WeaponType" type="WeaponType" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name = "WeaponType">
+        <xs:restriction base = "xs:string">
+            <xs:enumeration value = "Machinegun"/>
+            <xs:enumeration value = "Laser"/>
+            <xs:enumeration value = "Rockets"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

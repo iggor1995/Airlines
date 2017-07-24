@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<aircompany
+        xmlns="https://www.w3schools.com"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://www.w3schools.com xml.xsd">
+        <cargoPlane overSeasFlight="true">
+            <name>Boeing - 747 - 8</name>
+            <cruisingSpeed>900</cruisingSpeed>
+            <flightRange>10500</flightRange>
+            <maxTakeOfWeight>447</maxTakeOfWeight>
+            <maxFlightHeight>13750</maxFlightHeight>
+            <fuelConsumption>10300</fuelConsumption>
+        </cargoPlane>
+        <passengerPlane passengersQuantity="180">
+            <name>Tupolev TU - 154</name>
+            <cruisingSpeed>950</cruisingSpeed>
+            <flightRange>5200</flightRange>
+            <maxTakeOfWeight>300</maxTakeOfWeight>
+            <maxFlightHeight>11000</maxFlightHeight>
+            <fuelConsumption>6200</fuelConsumption>
+        </passengerPlane>
+        <passengerPlane passengersQuantity="192">
+            <name>Tupolev TU - 204</name>
+            <cruisingSpeed>850</cruisingSpeed>
+            <flightRange>40000</flightRange>
+            <maxTakeOfWeight>107</maxTakeOfWeight>
+            <maxFlightHeight>7200</maxFlightHeight>
+            <fuelConsumption>3450</fuelConsumption>
+        </passengerPlane>
+        <passengerPlane passengersQuantity = "95">
+            <name>Sukhoi SuperJet - 100</name>
+            <cruisingSpeed>900</cruisingSpeed>
+            <flightRange>4500</flightRange>
+            <maxTakeOfWeight>42</maxTakeOfWeight>
+            <maxFlightHeight>8000</maxFlightHeight>
+            <fuelConsumption>1700</fuelConsumption>
+        </passengerPlane>
+        <militaryPlane WeaponType="Rockets">
+            <name>Douglas F-4 Phantom II</name>
+            <cruisingSpeed>2500</cruisingSpeed>
+            <flightRange>2300</flightRange>
+            <maxTakeOfWeight>10</maxTakeOfWeight>
+            <maxFlightHeight>17000</maxFlightHeight>
+            <fuelConsumption>4000</fuelConsumption>
+        </militaryPlane>
+
+</aircompany>

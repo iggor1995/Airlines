@@ -5,13 +5,15 @@ import plane.MilitaryPlane;
 import plane.PassangerPlane;
 import plane.Plane;
 
+import java.util.List;
+
 
 /**
  * Created by User on 16.06.2017.
  */
 public class PlanesListDrawer {
 
-    public static void drawPlanesList(Plane[] planes){
+    public static void drawPlanesList(List<Plane> planes){
         int counter = 0;
         for(Plane plane : planes){
             if(plane == null)

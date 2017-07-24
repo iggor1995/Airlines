@@ -32,7 +32,7 @@ public class PlaneFilter  {
 
             System.out.println("Fuel consumption sorted list between " + startVal + " and " + endVal);
             System.out.println(counter + " results");
-            PlanesListDrawer.drawPlanesList(fuelSortedPlanes);
+            //PlanesListDrawer.drawPlanesList(fuelSortedPlanes);
             System.out.println("End list");
         }
         else
